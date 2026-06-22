@@ -1,0 +1,271 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 50px;
+    background:white;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.menu li{
+    cursor:pointer;
+}
+
+.search-box input{
+    padding:10px 15px;
+    width:250px;
+    border:none;
+    background:#f2f2f2;
+    border-radius:30px;
+}
+
+.login{
+     background:black;
+     color: white;
+    border:none;
+     padding:10px 20px;
+    border-radius:30px;
+    cursor:pointer;
+}
+.signup{
+   
+    border:none;
+    padding:10px 20px;
+   cursor:pointer;
+}
+
+.category-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:40px 60px;
+}
+
+.categories{
+    display:flex;
+    gap:40px;
+}
+
+.categories a{
+    text-decoration:none;
+    color:black;
+    font-size:18px;
+}
+
+.popular-btn,
+.filter-btn{
+    padding:12px 25px;
+    border:1px solid #ddd;
+    background:white;
+    border-radius:15px;
+}
+
+
+.shots-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 50px;
+}
+
+.shots-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 24px;
+}
+
+.shot-card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.shot-image-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    margin-bottom: 12px;
+    background-color: #f0f0f0;
+}
+
+.shot-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.shot-card:hover .shot-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.shot-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #0d0c22;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.author-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #666;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-name {
+    font-weight: 600;
+    color: #0d0c22;
+}
+
+.stats {
+    display: flex;
+    gap: 12px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+@media (max-width: 1200px) {
+    .shots-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .shots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .shots-container {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .shots-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.signup-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.signup-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.signup-section p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.signup-cta-btn {
+    background: #0d0c22;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.site-footer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 50px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-nav a, .footer-links a, .social-link {
+    text-decoration: none;
+    color: #0d0c22;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 1000px) {
+    .footer-top, .footer-bottom {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
